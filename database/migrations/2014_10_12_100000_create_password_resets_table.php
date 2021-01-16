@@ -11,6 +11,7 @@ class CreatePasswordResetsTable extends Migration
      *
      * @return void
      */
+    // パスワードを忘れてログイン出来なくなったユーザ向けに、パスワード変更メールを送信する処理。
     public function up()
     {
         Schema::create('password_resets', function (Blueprint $table) {
