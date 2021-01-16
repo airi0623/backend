@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// デフォルト
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'RecipeController@top');
+
+
+// 確認メール許可しなければ登録できないようにする時に使う
+// Auth::routes(['verify' => true]);
