@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// デフォルト
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', 'App\Http\Controllers\RecipeController@top');
+Route::get('users/sign_up', 'App\Http\Controllers\UserController@sign_up')->name('sign_up');
+
+
+
+// 確認メール許可しなければ登録できないようにする時に使う
+// Auth::routes(['verify' => true]);
+
+
