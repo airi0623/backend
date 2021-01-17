@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +19,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'RecipeController@top');
+
+Route::get('/', 'App\Http\Controllers\RecipeController@top');
 
 
 // 確認メール許可しなければ登録できないようにする時に使う
 // Auth::routes(['verify' => true]);
+
+
